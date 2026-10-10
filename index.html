@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Capaceteria.club | Lojas Físicas & Loja Online</title>
+  
+  <meta name="description" content="Capaceteria.club - Encontre a loja física mais próxima em São Luís ou compre online no site oficial com frete rápido.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Capaceteria.club | Lojas Físicas & Loja Online">
+  <meta property="og:description" content="Acesse nosso site de compras, Instagram ou fale no WhatsApp da loja mais próxima em São Luís.">
+  <meta property="og:image" content="https://capaceteria.club/storage/banners/01M146B63VC2NDKBQ8RWYXFDW1.png">
+
+  <link rel="icon" href="https://capaceteria.club/favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --orange: #fe6139;
+      --orange-dark: #e04a25;
+      --orange-light: #fff2ee;
+      --black: #000000;
+      --brand-900: #0f1015;
+      --brand-800: #181920;
+      --brand-700: #2d2f3b;
+      --brand-500: #64748b;
+      --brand-200: #e2e8f0;
+      --brand-100: #f1f5f9;
+      --brand-50: #f8fafc;
+      --white: #ffffff;
+      --whatsapp: #25d366;
+      --whatsapp-hover: #1ebd5b;
+      --font-display: 'Anton', 'Impact', sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --max-w: 1280px;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(16px, 4vw, 32px);
+    }
+
+    /* ========================================================
+       1. HEADER BRANCO OFICIAL (COMPACTO E 100% CENTRALIZADO)
+       ======================================================== */
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--brand-200);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .header-main {
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.02);
+    }
+
+    .logo-svg {
+      height: 38px;
+      width: auto;
+      max-width: 230px;
+      display: block;
+    }
+
+    /* ========================================================
+       3. HERO BANNER PRINCIPAL (ALTO, IMERSIVO E IMPACTANTE)
+       ======================================================== */
+    .hero-banner {
+      background: var(--black);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      min-height: clamp(540px, 85vh, 750px);
+      display: flex;
+      align-items: center;
+      padding: clamp(44px, 8vh, 76px) 0;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      opacity: 0.88;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.88) 55%, rgba(0, 0, 0, 0.35) 100%);
+    }
+
+    @media (max-width: 640px) {
+      .hero-bg-img {
+        object-position: 80% center;
+        opacity: 0.7;
+      }
+      .hero-overlay {
+        background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.92) 70%, #000000 100%);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 620px;
+      width: 100%;
+    }
+
+    .hero-tag {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 6.5vw, 60px);
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .hero-title-line {
+      display: block;
+      color: var(--white);
+      line-height: 1.15;
+    }
+
+    .hero-title-highlight {
+      display: block;
+      color: var(--orange);
+      line-height: 1.15;
+      font-size: 1.06em;
+    }
+
+    .hero-title-free {
+      display: block;
+      color: var(--orange);
+      line-height: 1.15;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(14px, 2.5vw, 17px);
+      color: #e2e8f0;
+      margin-bottom: 32px;
+      line-height: 1.5;
+      max-width: 500px;
+    }
+
+    /* BOTÕES DENTRO DO HERO NO COMPUTADOR E NO CELULAR */
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+    }
+
+    @media (min-width: 540px) {
+      .hero-buttons {
+        flex-direction: row;
+      }
+    }
+
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: all 0.22s ease;
+      min-height: 52px;
+    }
+
+    .btn-hero:active {
+      transform: scale(0.98);
+    }
+
+    .btn-hero-shop {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 6px 20px rgba(254, 97, 57, 0.4);
+    }
+
+    .btn-hero-shop:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(254, 97, 57, 0.55);
+    }
+
+    .btn-hero-insta {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--white);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-hero-insta:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* ========================================================
+       4. SEÇÃO: NOSSAS LOJAS FÍSICAS (GRID RESPONSIVO)
+       ======================================================== */
+    .stores-section {
+      padding: clamp(48px, 8vw, 84px) 0;
+      background: var(--brand-50);
+      border-top: 1px solid var(--brand-200);
+      border-bottom: 1px solid var(--brand-200);
+    }
+
+    .section-header {
+      margin-bottom: clamp(28px, 5vw, 44px);
+    }
+
+    .section-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .section-dash {
+      width: 24px;
+      height: 3px;
+      background: var(--orange);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--black);
+    }
+
+    .section-desc {
+      font-size: clamp(14px, 2vw, 16px);
+      color: var(--brand-500);
+      max-width: 680px;
+      margin-top: 6px;
+    }
+
+    /* GRID DAS 3 LOJAS: 3 COLUNAS NO PC, 1 NO CELULAR */
+    .stores-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .stores-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .stores-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .store-card {
+      background: var(--white);
+      border: 1px solid var(--brand-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+
+    .store-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.09);
+    }
+
+    /* FOTO DA FACHADA DA LOJA */
+    .store-photo-wrap {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: var(--black);
+      overflow: hidden;
+    }
+
+    .store-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .store-card:hover .store-img {
+      transform: scale(1.05);
+    }
+
+    .store-photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+      pointer-events: none;
+    }
+
+    .store-badge-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+
+    /* CONTEÚDO E DETALHES */
+    .store-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .store-header {
+      margin-bottom: 16px;
+    }
+
+    .store-name {
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      color: var(--black);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .store-address {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13.5px;
+      color: var(--brand-700);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .store-address svg {
+      width: 18px;
+      height: 18px;
+      color: var(--orange);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* BOTÕES DA LOJA: WHATSAPP & MAPS */
+    .store-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      min-height: 46px;
+    }
+
+    .btn-store:active {
+      transform: scale(0.97);
+    }
+
+    .btn-store-wa {
+      background: var(--whatsapp);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-store-wa:hover {
+      background: var(--whatsapp-hover);
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-store-map {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-store-map:hover {
+      background: var(--brand-800);
+    }
+
+    .btn-store svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    /* ========================================================
+       5. FOOTER OFICIAL COMPLETO (IDÊNTICO AO SITE)
+       ======================================================== */
+    .footer {
+      background: var(--black);
+      color: #94a3b8;
+      padding: 48px 0 36px;
+      font-size: 13px;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      height: 38px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-desc {
+      max-width: 600px;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       1. HEADER OFICIAL (LOGO CENTRALIZADA)
+       ======================================================== -->
+  <header class="header">
+    <div class="container header-main">
+      <a href="https://capaceteria.club" class="logo-link" aria-label="Capaceteria.club">
+        <svg class="logo-svg" viewBox="0 5 408 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Capaceteria.club">
+          <g transform="translate(6,10)">
+            <path d="M50 8C25.147 8 5 28.147 5 53v20a8 8 0 0 0 8 8h10.5v-24a3 3 0 0 1 3-3h47a3 3 0 0 1 3 3v24H87a8 8 0 0 0 8-8V53C95 28.147 74.853 8 50 8Z" fill="#000000"/>
+            <path d="M23.5 57.5h53a3 3 0 0 1 3 3V71a6 6 0 0 1-6 6h-47a6 6 0 0 1-6-6V60.5a3 3 0 0 1 3-3Z" fill="#fe6139"/>
+            <circle cx="8" cy="80" r="6" fill="#000000"/>
+            <circle cx="92" cy="80" r="6" fill="#000000"/>
+          </g>
+          <text x="118" y="55" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="40" letter-spacing="0.5" fill="#000000">CAPACETERIA</text>
+          <text x="118" y="90" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="40" letter-spacing="0.5" fill="#fe6139">.CLUB</text>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       3. HERO BANNER PRINCIPAL (COM OS 2 BOTÕES OFICIAIS)
+       ======================================================== -->
+  <section class="hero-banner">
+    <img src="https://capaceteria.club/storage/banners/01M146B63VC2NDKBQ8RWYXFDW1.png" alt="Capacete e Intercomunicador" class="hero-bg-img">
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">Segurança além de capacetes</div>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Na compra do capacete</span>
+          <span class="hero-title-highlight">20% OFF</span>
+          <span class="hero-title-line">em intercomunicadores</span>
+          <span class="hero-title-free">Instalação Grátis</span>
+        </h1>
+        <p class="hero-subtitle">Aproveite para sair conectado ou visite nossas lojas físicas em São Luís.</p>
+
+        <!-- OS DOIS BOTÕES DE AÇÃO PRINCIPAIS -->
+        <div class="hero-buttons">
+          <a href="https://capaceteria.club" class="btn-hero btn-hero-shop" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span>Comprar no Site Oficial</span>
+          </a>
+
+          <a href="https://instagram.com/capaceteria.club" class="btn-hero btn-hero-insta" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span>Acessar nosso Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. SEÇÃO: NOSSAS 3 LOJAS FÍSICAS EM SÃO LUÍS
+       ======================================================== -->
+  <section class="stores-section" id="lojas">
+    <div class="container">
+      
+      <div class="section-header">
+        <div class="section-badge-wrap">
+          <span class="section-dash"></span>
+          <span style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--orange);">
+            Lojas Físicas
+          </span>
+        </div>
+        <h2 class="section-title">Nossas Unidades em São Luís</h2>
+        <p class="section-desc">
+          Visite a loja mais próxima para experimentar capacetes e jaquetas ou fale diretamente com a equipe no WhatsApp.
+        </p>
+      </div>
+
+      <!-- GRID RESPONSIVO: 3 COLUNAS NO COMPUTADOR / 1 NO CELULAR -->
+      <div class="stores-grid">
+
+        <!-- ==============================================
+             LOJA 1: JOÃO DE DEUS
+             ============================================== -->
+        <article class="store-card">
+          <div class="store-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop" alt="Fachada Loja João de Deus" class="store-img" loading="lazy">
+            <div class="store-photo-overlay"></div>
+            <span class="store-badge-tag">Loja 01</span>
+          </div>
+
+          <div class="store-body">
+            <div class="store-header">
+              <h3 class="store-name">Loja João de Deus</h3>
+              <p class="store-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Travessa Rubens Almeida, 13 B, Parque Universitário, João de Deus, São Luís - MA</span>
+              </p>
+            </div>
+
+            <div class="store-actions">
+              <a href="https://wa.me/5598996157783?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20na%20Loja%20Jo%C3%A3o%20de%20Deus%20da%20Capaceteria.club" class="btn-store btn-store-wa" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.42 12.38c-.23.64-1.33 1.22-1.86 1.3-.47.07-1.07.1-3.21-.78-2.73-1.12-4.48-3.9-4.62-4.08-.14-.18-1.12-1.49-1.12-2.84 0-1.35.7-2.01.95-2.29.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.47.23.55.78 1.9.85 2.04.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.35-.42.48-.14.13-.28.28-.12.56.16.27.7 1.15 1.51 1.87 1.04.93 1.92 1.22 2.19 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.37-.23.62-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.12.07.69-.16 1.33z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Travessa+Rubens+Almeida+13+B+Joao+de+Deus+Sao+Luis+MA" class="btn-store btn-store-map" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span>Localização</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             LOJA 2: CENTRO
+             ============================================== -->
+        <article class="store-card">
+          <div class="store-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop" alt="Fachada Loja Centro" class="store-img" loading="lazy">
+            <div class="store-photo-overlay"></div>
+            <span class="store-badge-tag">Loja 02</span>
+          </div>
+
+          <div class="store-body">
+            <div class="store-header">
+              <h3 class="store-name">Loja Centro</h3>
+              <p class="store-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Avenida Senador Vitorino Freire, 488, Vila Passos, São Luís - MA</span>
+              </p>
+            </div>
+
+            <div class="store-actions">
+              <a href="https://wa.me/5598996157783?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20na%20Loja%20Centro%20da%20Capaceteria.club" class="btn-store btn-store-wa" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.42 12.38c-.23.64-1.33 1.22-1.86 1.3-.47.07-1.07.1-3.21-.78-2.73-1.12-4.48-3.9-4.62-4.08-.14-.18-1.12-1.49-1.12-2.84 0-1.35.7-2.01.95-2.29.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.47.23.55.78 1.9.85 2.04.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.35-.42.48-.14.13-.28.28-.12.56.16.27.7 1.15 1.51 1.87 1.04.93 1.92 1.22 2.19 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.37-.23.62-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.12.07.69-.16 1.33z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Senador+Vitorino+Freire+488+Vila+Passos+Sao+Luis+MA" class="btn-store btn-store-map" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span>Localização</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==============================================
+             LOJA 3: COHAMA
+             ============================================== -->
+        <article class="store-card">
+          <div class="store-photo-wrap">
+            <img src="https://images.unsplash.com/photo-1558980664-3a031cf67ea8?q=80&w=800&auto=format&fit=crop" alt="Fachada Loja Cohama" class="store-img" loading="lazy">
+            <div class="store-photo-overlay"></div>
+            <span class="store-badge-tag">Loja 03</span>
+          </div>
+
+          <div class="store-body">
+            <div class="store-header">
+              <h3 class="store-name">Loja Cohama</h3>
+              <p class="store-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Av. Daniel de La Touche, Cohama (Ponto a confirmar), São Luís - MA</span>
+              </p>
+            </div>
+
+            <div class="store-actions">
+              <a href="https://wa.me/5598996157783?text=Ol%C3%A1%21%20Gostaria%20de%20atendimento%20na%20Loja%20Cohama%20da%20Capaceteria.club" class="btn-store btn-store-wa" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.42 12.38c-.23.64-1.33 1.22-1.86 1.3-.47.07-1.07.1-3.21-.78-2.73-1.12-4.48-3.9-4.62-4.08-.14-.18-1.12-1.49-1.12-2.84 0-1.35.7-2.01.95-2.29.25-.27.55-.34.73-.34.18 0 .37 0 .53.01.17.01.4-.06.62.47.23.55.78 1.9.85 2.04.07.14.12.3.02.48-.09.18-.14.3-.28.46-.14.16-.29.35-.42.48-.14.13-.28.28-.12.56.16.27.7 1.15 1.51 1.87 1.04.93 1.92 1.22 2.19 1.36.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.37-.23.62-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.12.07.69-.16 1.33z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Av+Daniel+de+La+Touche+Cohama+Sao+Luis+MA" class="btn-store btn-store-map" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                <span>Localização</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. FOOTER OFICIAL
+       ======================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <img src="https://capaceteria.club/images/logo-capaceteria.svg" alt="Capaceteria.club" class="footer-logo">
+      <p class="footer-desc">
+        Segurança além de capacetes. Os melhores equipamentos para motociclistas em São Luís e em todo o Brasil.
+      </p>
+      <ul class="footer-links">
+        <li><a href="#lojas">Nossas Lojas</a></li>
+        <li><a href="https://capaceteria.club" target="_blank" rel="noopener">Loja Online</a></li>
+        <li><a href="https://instagram.com/capaceteria.club" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+      <div class="footer-copy">
+        &copy; 2026 Capaceteria.club &bull; Lojas Físicas & E-commerce &bull; Desenvolvido por Nativo 360&deg;
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

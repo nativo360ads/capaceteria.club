@@ -67,58 +67,7 @@
     }
 
     /* ========================================================
-       1. TOPBAR PRETA (LARGURA TOTAL - EXATA DO E-COMMERCE)
-       ======================================================== */
-    .topbar {
-      background: var(--black);
-      color: var(--white);
-      font-size: 12px;
-      padding: 9px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .topbar-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .topbar-items {
-      display: flex;
-      align-items: center;
-      gap: clamp(12px, 3vw, 24px);
-      flex-wrap: wrap;
-    }
-
-    .topbar-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 500;
-      color: #e2e8f0;
-    }
-
-    .topbar-chip svg {
-      width: 14px;
-      height: 14px;
-      color: var(--orange);
-      flex-shrink: 0;
-    }
-
-    .topbar-right {
-      display: none;
-      align-items: center;
-      gap: 6px;
-      color: #e2e8f0;
-      font-weight: 500;
-    }
-
-    @media (min-width: 768px) {
-      .topbar-right { display: flex; }
-    }
-
-    /* ========================================================
-       2. HEADER BRANCO (TOTALMENTE RESPONSIVO)
+       1. HEADER BRANCO OFICIAL (LOGO CENTRALIZADA)
        ======================================================== */
     .header {
       background: var(--white);
@@ -126,70 +75,34 @@
       position: sticky;
       top: 0;
       z-index: 50;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     }
 
     .header-main {
       padding: 16px 0;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
+      justify-content: center;
     }
 
     .logo-link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      height: 42px;
+      justify-content: center;
+      height: 48px;
       text-decoration: none;
-      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-link:hover {
+      transform: scale(1.03);
     }
 
     .logo-img {
       height: 100%;
       width: auto;
-      max-height: 42px;
-    }
-
-    .header-nav {
-      display: none;
-      align-items: center;
-      gap: 24px;
-      list-style: none;
-    }
-
-    @media (min-width: 860px) {
-      .header-nav { display: flex; }
-    }
-
-    .header-nav a {
-      color: var(--brand-700);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-      transition: color 0.15s;
-    }
-
-    .header-nav a:hover {
-      color: var(--orange);
-    }
-
-    .header-cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--black);
-      color: var(--white);
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .header-cta-btn:hover {
-      background: var(--orange);
+      max-height: 48px;
+      display: block;
     }
 
     /* ========================================================
@@ -240,16 +153,33 @@
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(34px, 6vw, 64px);
-      line-height: 0.95;
+      font-size: clamp(28px, 5.5vw, 56px);
+      line-height: 1.15;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
 
-    .hero-title .highlight {
-      color: var(--orange);
+    .hero-title-line {
       display: block;
+      color: var(--white);
+      line-height: 1.15;
+    }
+
+    .hero-title-highlight {
+      display: block;
+      color: var(--orange);
+      line-height: 1.15;
+      font-size: 1.06em;
+    }
+
+    .hero-title-free {
+      display: block;
+      color: var(--orange);
+      line-height: 1.15;
     }
 
     .hero-subtitle {
@@ -447,30 +377,6 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
-    .store-badge-status {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(6px);
-      color: #ffffff;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(254, 97, 57, 0.6);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--orange);
-      box-shadow: 0 0 8px var(--orange);
-    }
 
     /* CONTEÚDO E DETALHES */
     .store-body {
@@ -625,85 +531,17 @@
       width: 100%;
     }
 
-    /* ========================================================
-       6. BOTÃO FLUTUANTE DE WHATSAPP (CANTO INFERIOR DIREITO)
-       ======================================================== */
-    .whatsapp-float-btn {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: var(--whatsapp);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-      z-index: 100;
-      text-decoration: none;
-      transition: transform 0.2s, background 0.2s;
-    }
-
-    .whatsapp-float-btn:hover {
-      transform: scale(1.08);
-      background: var(--whatsapp-hover);
-    }
-
-    .whatsapp-float-btn svg {
-      width: 32px;
-      height: 32px;
-      fill: currentColor;
-    }
   </style>
 </head>
 <body>
 
   <!-- ========================================================
-       1. TOPBAR PRETA
-       ======================================================== -->
-  <aside class="topbar">
-    <div class="container topbar-content">
-      <div class="topbar-items">
-        <span class="topbar-chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.83H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 0h-12"/></svg>
-          Frete rápido
-        </span>
-        <span class="topbar-chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
-          Até 6x sem juros
-        </span>
-        <span class="topbar-chip">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/></svg>
-          5% OFF no Pix
-        </span>
-      </div>
-
-      <div class="topbar-right">
-        <span>Atendimento</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 14px; height: 14px;"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/></svg>
-      </div>
-    </div>
-  </aside>
-
-  <!-- ========================================================
-       2. HEADER BRANCO OFICIAL
+       1. HEADER OFICIAL (LOGO CENTRALIZADA)
        ======================================================== -->
   <header class="header">
     <div class="container header-main">
       <a href="https://capaceteria.club" class="logo-link" aria-label="Capaceteria.club">
         <img src="https://capaceteria.club/images/logo-capaceteria.svg" alt="Capaceteria.club" class="logo-img">
-      </a>
-
-      <ul class="header-nav">
-        <li><a href="#lojas">Nossas Lojas</a></li>
-        <li><a href="https://capaceteria.club" target="_blank" rel="noopener">Loja Online</a></li>
-        <li><a href="https://instagram.com/capaceteria.club" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
-
-      <a href="https://capaceteria.club" class="header-cta-btn" target="_blank" rel="noopener">
-        <span>Acessar Loja Online</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
   </header>
@@ -719,10 +557,10 @@
       <div class="hero-content">
         <div class="hero-tag">Segurança além de capacetes</div>
         <h1 class="hero-title">
-          Na compra do capacete<br>
-          <span class="highlight">20% OFF</span>
-          em intercomunicadores<br>
-          <span style="color: var(--orange);">Instalação Grátis</span>
+          <span class="hero-title-line">Na compra do capacete</span>
+          <span class="hero-title-highlight">20% OFF</span>
+          <span class="hero-title-line">em intercomunicadores</span>
+          <span class="hero-title-free">Instalação Grátis</span>
         </h1>
         <p class="hero-subtitle">Aproveite para sair conectado ou visite nossas lojas físicas em São Luís.</p>
 
@@ -741,7 +579,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
             </svg>
-            <span>Siga no Instagram</span>
+            <span>Acessar nosso Instagram</span>
           </a>
         </div>
       </div>
@@ -778,10 +616,6 @@
             <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop" alt="Fachada Loja João de Deus" class="store-img" loading="lazy">
             <div class="store-photo-overlay"></div>
             <span class="store-badge-tag">Loja 01</span>
-            <span class="store-badge-status">
-              <span class="status-dot"></span>
-              Loja Física
-            </span>
           </div>
 
           <div class="store-body">
@@ -814,10 +648,6 @@
             <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&w=800&auto=format&fit=crop" alt="Fachada Loja Centro" class="store-img" loading="lazy">
             <div class="store-photo-overlay"></div>
             <span class="store-badge-tag">Loja 02</span>
-            <span class="store-badge-status">
-              <span class="status-dot"></span>
-              Loja Principal
-            </span>
           </div>
 
           <div class="store-body">
@@ -850,10 +680,6 @@
             <img src="https://images.unsplash.com/photo-1558980664-3a031cf67ea8?q=80&w=800&auto=format&fit=crop" alt="Fachada Loja Cohama" class="store-img" loading="lazy">
             <div class="store-photo-overlay"></div>
             <span class="store-badge-tag">Loja 03</span>
-            <span class="store-badge-status">
-              <span class="status-dot"></span>
-              Nova Unidade
-            </span>
           </div>
 
           <div class="store-body">
@@ -901,15 +727,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ========================================================
-       6. BOTÃO FLUTUANTE DE WHATSAPP
-       ======================================================== -->
-  <a href="https://wa.me/5598996157783?text=Ol%C3%A1%21%20Vim%20do%20site%20Capaceteria.club%20e%20gostaria%20de%20atendimento." class="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
-    <svg viewBox="0 0 32 32">
-      <path d="M16 3C9.373 3 4 8.373 4 15c0 2.34.676 4.523 1.844 6.365L4 29l7.836-1.803A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3Zm0 21.75c-1.918 0-3.71-.55-5.223-1.5l-.375-.234-4.65 1.07 1.09-4.53-.246-.39A9.7 9.7 0 0 1 5.25 15c0-5.937 4.813-10.75 10.75-10.75S26.75 9.063 26.75 15 21.937 24.75 16 24.75Zm5.906-8.055c-.324-.163-1.914-.945-2.211-1.055-.297-.11-.512-.163-.727.163-.215.324-.83 1.055-1.02 1.273-.187.215-.375.242-.699.082-.324-.164-1.367-.504-2.605-1.61-.964-.86-1.613-1.926-1.804-2.25-.188-.324-.02-.5.144-.664.148-.148.325-.383.488-.574.164-.192.219-.328.328-.547.11-.219.055-.41-.027-.574-.082-.164-.727-1.754-.996-2.402-.262-.629-.527-.543-.727-.554-.187-.01-.402-.012-.617-.012s-.574.082-.875.41c-.301.328-1.148 1.121-1.148 2.734s1.176 3.172 1.34 3.39c.164.219 2.312 3.531 5.605 4.953.782.337 1.394.539 1.871.69.786.25 1.5.215 2.066.13.63-.094 1.914-.782 2.184-1.539.27-.758.27-1.406.19-1.54-.081-.132-.296-.214-.62-.378Z"/>
-    </svg>
-  </a>
 
 </body>
 </html>
